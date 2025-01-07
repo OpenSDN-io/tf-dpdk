@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 # SPDX-License-Identifier: BSD-3-Clause
 # Copyright(c) 2016  Neil Horman <nhorman@tuxdriver.com>
 
@@ -7,8 +7,6 @@
 # Utility to dump PMD_INFO_STRING support from an object file
 #
 # -------------------------------------------------------------------------
-from __future__ import print_function
-from __future__ import unicode_literals
 import json
 import io
 import os
@@ -19,6 +17,9 @@ from elftools.common.exceptions import ELFError
 from elftools.common.py3compat import byte2int
 from elftools.elf.elffile import ELFFile
 from optparse import OptionParser
+
+# requires elftools:
+# pip install "pyelftools<0.25"
 
 # For running from development directory. It should take precedence over the
 # installed pyelftools.

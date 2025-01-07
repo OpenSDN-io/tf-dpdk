@@ -1,9 +1,8 @@
-#! /usr/bin/env python
+#!/usr/bin/python3
 # SPDX-License-Identifier: BSD-3-Clause
 # Copyright(c) 2010-2014 Intel Corporation
 #
 
-from __future__ import print_function
 import sys
 import os
 import getopt
