@@ -78,10 +78,11 @@
  */
 #define CONVERT_NATIVE(fend, width, x) ({ \
 typeof(x) ___x; \
-if ((fend) == ELFDATA2LSB) \
+if ((fend) == ELFDATA2LSB) { \
 	___x = le##width##toh(x); \
-else \
+} else { \
 	___x = be##width##toh(x); \
+} \
 	___x; \
 })
 
